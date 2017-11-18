@@ -1,0 +1,4 @@
+/home/user/LipReading/GRID/Video/s1/face/000001.avi
+/home/user/LipReading/GRID/Video/s1/face/000002.avi
+/home/user/LipReading/GRID/Video/s1/face/000003.avi
+/home/user/LipReading/GRID/Video/s1/face/000004.avi

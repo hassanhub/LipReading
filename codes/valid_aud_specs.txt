@@ -1,0 +1,3 @@
+/home/user/LipReading/GRID/Audio/s1/AudSpecs/000001.mat
+/home/user/LipReading/GRID/Audio/s1/AudSpecs/000002.mat
+/home/user/LipReading/GRID/Audio/s1/AudSpecs/000003.mat
