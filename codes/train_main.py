@@ -244,4 +244,3 @@ for i in range(num_iter):
         model.save_weights('LipReading_mid_weights.h5')
 #steps per epoch=ceil(2730/32)* 10
 #valiation=1
-
