@@ -3,7 +3,7 @@ import fnmatch
 import cv2
 import numpy as np
 import sys
-
+ 
 if(len(sys.argv)<3):
 	print('Insufficient arguments')
 	quit()
