@@ -33,12 +33,14 @@ You can find all demo files [here](demo/).
 A few samples of the network output are given below:
 
 **Speaker 1**
+
 [![Sample1](https://img.youtube.com/vi/Op7Z9KH5Fis/0.jpg)](https://youtu.be/Op7Z9KH5Fis "Sample1_s1")
 
 **Speaker 29**
+
 [![Sample2](https://img.youtube.com/vi/O0Gfb-1lu2k/0.jpg)](https://youtu.be/O0Gfb-1lu2k "Sample2_s29")
 
-**Cite**
+### Cite
 
 If you found this work/code helpful, please cite:
 ```
