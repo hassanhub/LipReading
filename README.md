@@ -7,7 +7,7 @@ This is the keras implementation of *Lip2AudSpec: Speech reconstruction from sil
 ### Abstract
 In this study, we propose a deep neural network for reconstructing intelligible speech from silent lip movement videos. We use auditory spectrogram as spectral representation of speech and its corresponding sound generation method resulting in a more natural sounding reconstructed speech. Our proposed network consists of an autoencoder to extract bottleneck features from the auditory spectrogram which is then used as target to our main lip reading network comprising of CNN, LSTM and fully connected layers. Our experiments show that the autoencoder is able to reconstruct the original auditory spectrogram with a 98% correlation and also improves the quality of reconstructed speech from the main lip reading network. Our model, trained jointly on different speakers is able to extract individual speaker characteristics and gives promising results of reconstructing intelligible speech with superior word recognition accuracy.
 
-Full paper for this work can be found **[here](https://arxiv.org/abs/1710.09798)**.
+**Full paper for this work can be found** **_[here](https://arxiv.org/abs/1710.09798)_**.
 
 ## Requirements
 We implemented the code in python2 using tensorflow, keras, scipy, numpy, cv2, sklearn, IPython, fnmatch. The mentioned libraries should be installed before running the codes. All the libraries can be easily installed using pip:
@@ -32,15 +32,14 @@ You can find all demo files [here](demo/).
 
 A few samples of the network output are given below:
 
-**Sample 1**
-
+**Speaker 1**
 [![Sample1](https://img.youtube.com/vi/Op7Z9KH5Fis/0.jpg)](https://youtu.be/Op7Z9KH5Fis "Sample1_s1")
 
-**Sample 2**
-
+**Speaker 29**
 [![Sample2](https://img.youtube.com/vi/O0Gfb-1lu2k/0.jpg)](https://youtu.be/O0Gfb-1lu2k "Sample2_s29")
 
 **Cite**
+
 If you found this work/code helpful, please cite:
 ```
 @article{akbari2017lip2audspec,
