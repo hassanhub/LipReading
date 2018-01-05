@@ -15,33 +15,11 @@ end=int(sys.argv[2])
 
 path='/home/user/LipReading/GRID'
 os.system('mkdir '+path)
-os.system('mkdir '+path+'/Audio')
 os.system('mkdir '+path+'/Video')
 
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
 ds_factor = 0.5
-
-for i in range(start,end):
-
-	if i==21:
-		continue
-
-	os.chdir(path+'/Audio')
-	file='s'+str(i)+'.tar'
-	link='http://spandh.dcs.shef.ac.uk/gridcorpus/s'+str(i)+'/audio/'+file
-
-	#downloading and unzipping audio for person 1
-	#os.system('wget '+link)
-	#os.system('tar -xf '+file)
-	#os.system('rm -f -r '+file)
-
-	#renaming  
-	#print(path+'/Audio/s'+str(i))
-	#os.chdir(path+'/Audio/s'+str(i))
-	#os.system('ls *.wav | cat -n | while read n f; do mv "$f" "$(printf %06d $n).wav"; done')
-
-
 
 for i in range(start,end):
 
@@ -127,3 +105,21 @@ for i in range(start,end):
 		#stabilizing video 
 		#os.system('ffmpeg -i '+ str(format_num1)+'.mpg' +' -vf vidstabdetect -f null -')
 		#os.system('ffmpeg -i '+ str(format_num1)+'.mpg' +' -vf vidstabtransform=smoothing=5:input="transforms.trf" '+ 's_'+str(format_num1)+'.mpg' )
+
+for i in range(start,end):
+	
+	if i==21:
+		continue
+
+	print(i)
+
+	os.system('mkdir '+path+'/Audio/s'+str(i))
+
+	os.chdir(path+'/Video/s'+str(i))
+	numfiles=len(fnmatch.filter(os.listdir(path+'/Video/s'+str(i)), '*.mpg'))
+	for j in range(1,numfiles+1):
+
+		format_num1="{number:06}".format(number=j)
+		#os.system('ffmpeg -i '+ str(format_num1)+'.mpg' +' -q:a 0 -map a '+path+'/Audio/s'+str(i)+'/'+str(format_num1)+'.wav' )
+		os.system('ffmpeg -i '+ str(format_num1)+'.mpg' +' -ac 1 -ar 8000 '+path+'/Audio/s'+str(i)+'/'+str(format_num1)+'.wav' )
+
